@@ -11,7 +11,7 @@ The second applicaiton is a figures calculator and supports finding the area and
 In order to run any of this applications which have to run open a terminal in the directory where our script files are located.
 In order to run the script we use the command `php calculator.php`
 However in our case we want to pass extra arguments called options to our application so to do that our command would look like this:<br/>
-`php calculator.php --type=arithmetic --operator=minus --param1=20 --param2=3`
+`php calculator.php --type=arithmetic --operator=minus --param1=20 --param2=3`<br/>
 It should be noted that options are passed as key value pairs and the data they contain is later on used in our application.
 
 ### Options
