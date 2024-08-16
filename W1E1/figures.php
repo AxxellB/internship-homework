@@ -8,7 +8,7 @@ $longopts = array(
     "a::",
     "b::",
     "c::",
-);
+);  
 
 $options = getopt("", $longopts);
 if ($options["calculation"] == "area") {
