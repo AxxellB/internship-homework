@@ -153,30 +153,76 @@ $game_data = [
     )
 ];
 
-$fin = fopen("php://stdin", "r");
+function main()
+{
+    global $game_data;
+    $fname = "scoreboard.txt";
+    $scoreboard = array();
+    $scoreboard = load_scoreboard($fname, $scoreboard);
+    $current_score = 0;
 
-echo "What is your name: ";
-$input = trim(fgets($fin));
+    $fin = fopen("php://stdin", "r");
+    echo "What is your name: ";
+    $input_name = trim(fgets($fin));
+    while ($input_name == "") {
+        echo "Please enter a name: ";
+        $input_name = trim(fgets($fin));
+    }
 
-echo "Welcome to who wants to get rich : $input" . "\n";
-echo "Your game will now begin!" . "\n";
+    echo "Welcome to who wants to get rich : $input_name" . "\n";
+    echo "Your game will now begin!" . "\n\n";
 
-while (True) {
-    foreach ($game_data as $current_data) {
-        echo "Question: " . $current_data["question"] . "\n";
-        echo "Answers:\n";
+    while (True) {
+        foreach ($game_data as $current_data) {
+            echo "Question: " . $current_data["question"] . "\n";
+            echo "Answers:\n";
 
-        foreach ($current_data["answers"] as $answer) {
-            echo "- " . $answer . "\n";
-        }
+            foreach ($current_data["answers"] as $answer) {
+                echo "- " . $answer . "\n";
+            }
 
-        echo "Please type your answer: " . "\n";
-        $input = trim(fgets($fin));
-        if ($input == $current_data["correct_answer"]) {
-            echo "Correct!" . "\n\n";
-        } else {
-            echo "Sorry, this was a wrong answer! Game over!" . "\n\n";
-            return;
+            echo "Please type your answer: " . "\n";
+            $input = trim(fgets($fin));
+
+            if ($input == $current_data["correct_answer"]) {
+                echo "Correct!" . "\n\n";
+                $current_score += 100;
+            } else {
+                echo "Sorry, this was a wrong answer! Game over!" . "\n" . "Your score is $current_score" . "\n\n";
+                if (!array_key_exists($input_name, $scoreboard)) {
+                    $scoreboard["$input_name"] = $current_score;
+                } else if ($scoreboard["$input_name"] < $current_score) {
+                    $scoreboard["$input_name"] = $current_score;
+                }
+                write_to_game_file("$fname", $scoreboard);
+                return;
+            }
         }
     }
 }
+
+function write_to_game_file($fname, $array)
+{
+    $handle = fopen("$fname", "w");
+    foreach ($array as $key => $value) {
+        fwrite($handle, $key . "=");
+        fwrite($handle, $value . " ");
+    }
+    fclose($handle);
+}
+function load_scoreboard($fname, $array)
+{
+    $handle = fopen("$fname", "r");
+    while (!feof($handle)) {
+        $line = trim(fgets($handle));
+        $pieces = explode(" ", $line);
+        foreach ($pieces as $piece) {
+            $scoreboard_entry = explode("=", $piece);
+            $array[$scoreboard_entry[0]] = $scoreboard_entry[1];
+        }
+    }
+    fclose($handle);
+    return $array;
+}
+
+main();
