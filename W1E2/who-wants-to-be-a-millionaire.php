@@ -262,7 +262,9 @@ function load_scoreboard($fname, $array)
         $pieces = explode(" ", $line);
         foreach ($pieces as $piece) {
             $scoreboard_entry = explode("=", $piece);
-            $array[$scoreboard_entry[0]] = $scoreboard_entry[1];
+            if ($scoreboard_entry[0] && $scoreboard_entry[1]) {
+                $array[$scoreboard_entry[0]] = $scoreboard_entry[1];
+            }
         }
     }
     fclose($handle);
