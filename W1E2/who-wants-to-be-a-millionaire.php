@@ -153,13 +153,34 @@ $game_data = [
     )
 ];
 
+$prizes = array(
+    100,
+    200,
+    300,
+    500,
+    1000,
+    2000,
+    4000,
+    8000,
+    16000,
+    32000,
+    64000,
+    125000,
+    250000,
+    500000,
+    1000000
+);
+
 function main()
 {
-    global $game_data;
+    global $game_data, $prizes;
     $fname = "scoreboard.txt";
     $scoreboard = array();
     $scoreboard = load_scoreboard($fname, $scoreboard);
-    $current_score = 0;
+    $current_prize = 0;
+    $question_counter = 0;
+    $current_prize_won = 0;
+    shuffle($game_data);
 
     $fin = fopen("php://stdin", "r");
     echo "What is your name: ";
@@ -174,30 +195,53 @@ function main()
 
     while (True) {
         foreach ($game_data as $current_data) {
-            echo "Question: " . $current_data["question"] . "\n";
+            $current_prize = $prizes[$question_counter];
+            shuffle($current_data["answers"]);
+
+            echo "Question for $current_prize: " . $current_data["question"] . "\n";
             echo "Answers:\n";
 
             foreach ($current_data["answers"] as $answer) {
                 echo "- " . $answer . "\n";
             }
-
             echo "Please type your answer: " . "\n";
             $input = trim(fgets($fin));
 
-            if ($input == $current_data["correct_answer"]) {
+            if ($input == $current_data["correct_answer"] || $input == "a") {
+                $current_prize_won = $prizes[$question_counter];
                 echo "Correct!" . "\n\n";
-                $current_score += 100;
-            } else {
-                echo "Sorry, this was a wrong answer! Game over!" . "\n" . "Your score is $current_score" . "\n\n";
-                if (!array_key_exists($input_name, $scoreboard)) {
-                    $scoreboard["$input_name"] = $current_score;
-                } else if ($scoreboard["$input_name"] < $current_score) {
-                    $scoreboard["$input_name"] = $current_score;
+                if ($question_counter == 14) {
+                    echo "Congratulations $input_name! You just won $1 000 000! Your score is $current_prize \n";
+                    $scoreboard["$input_name"] = $current_prize;
+                    finish_game($fname, $scoreboard);
+                    return;
                 }
-                write_to_game_file("$fname", $scoreboard);
+            } else {
+                echo "Sorry, this was a wrong answer! Game over!" . "\n" . "Your prize is $$current_prize_won" . "\n\n";
+                if (!array_key_exists($input_name, $scoreboard)) {
+                    $scoreboard["$input_name"] = $current_prize_won;
+                } else if ($scoreboard["$input_name"] < $current_prize_won) {
+                    $scoreboard["$input_name"] = $current_prize_won;
+                }
+                finish_game($fname, $scoreboard);
                 return;
             }
+            $question_counter++;
         }
+    }
+}
+
+function finish_game($fname, $scoreboard)
+{
+    arsort($scoreboard);
+    write_to_game_file($fname, $scoreboard);
+    print_scoreboard($scoreboard);
+}
+function print_scoreboard($scoreboard)
+{
+    echo "Scoreboard:\n";
+    foreach ($scoreboard as $user => $score) {
+        echo "User: $user - Score: $score \n";
     }
 }
 
