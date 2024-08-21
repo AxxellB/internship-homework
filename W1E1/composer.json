@@ -1,0 +1,17 @@
+{
+    "name": "my/composer",
+    "autoload": {
+        "psr-4": {
+            "My\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AxxellB",
+            "email": "axxellblaze@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    }
+}
