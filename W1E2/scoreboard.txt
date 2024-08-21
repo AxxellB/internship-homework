@@ -1,1 +1,1 @@
-Angel=1000000 Ivan=1000000 Pesho=500 Dani=300 Sevo=200 Ian=200 f=100 Ps=100 Ksa=100 fafsasffa=0 asd=0 Asddd=0 
+test=150 

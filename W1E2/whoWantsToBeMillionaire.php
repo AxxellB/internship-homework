@@ -271,4 +271,6 @@ function load_scoreboard($fname, $array)
     return $array;
 }
 
-main();
+if (php_sapi_name() === 'cli' && basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'])) {
+    main();
+}
