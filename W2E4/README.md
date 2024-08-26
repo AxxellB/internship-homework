@@ -1,5 +1,5 @@
-# W1E4
-W1E4 consists of another command line interface(CLI) applications.
+# W2E4
+W2E4 consists of another command line interface(CLI) applications.
 The application aims to create an electronic diary for a school.
 
 ## Usage
