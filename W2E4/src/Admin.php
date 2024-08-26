@@ -197,8 +197,4 @@ class Admin extends User
         $this->run($subjects, $users);
     }
 
-    public function logOut(){
-        echo "Logged out successfully\n";
-        $this->status = "LoggedOut";
-    }
 }

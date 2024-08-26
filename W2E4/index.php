@@ -19,7 +19,7 @@ $t = new Teacher(2,"Test", "test2", "Ivan", "Ivanov", $subjects);
 $a = new Admin(3,"Test", "test3", "Georgi", "Georgiev");
 $users = [$s, $t, $a];
 
-function login($username, $password, $user){
+function login($username, $password, $user): bool{
     if($username == $user->username && $password == $user->password){
         return true;
     }
@@ -29,7 +29,9 @@ function login($username, $password, $user){
 function handleLogin(){
     $login_attempts = 3;
     global $users;
+    global $subjects;
     while($login_attempts > 0){
+        echo $login_attempts . "\n";
         $fin = fopen("php://stdin", "r");
         echo "Enter username: ";
         $input_username = trim(fgets($fin));
@@ -41,22 +43,18 @@ function handleLogin(){
             if ($login) {
                 $user->status = "LoggedIn";
                 echo "Logged in successfully!\n";
-                return $user;
+                $loggedUser = $user;
+                if($loggedUser->role == "admin" || $loggedUser->role == "teacher"){
+                   return $loggedUser->run($subjects, $users);
+                }
+                else if ($loggedUser->role == "student"){
+                    return $loggedUser->run();
+                }
             }
         }
-        echo "Wrong username or password!\n";
         $login_attempts--;
+        echo "Wrong username or password!\n";
     }
 }
 
-$loggedUser = handleLogin();
-
-if($loggedUser){
-    if($loggedUser->role == "admin"){
-        $loggedUser->run($subjects, $users);
-    }
-    else if($loggedUser->role == "teacher"){
-        $loggedUser->run($subjects, $users);
-    }
-
-}
+handleLogin();

@@ -24,7 +24,10 @@ class User
         }
     }
 
-    public function login($username, $password) {
+    public function logOut(){
+        echo "Logged out successfully\n";
+        $this->status = "LoggedOut";
 
+        handleLogin();
     }
 }
