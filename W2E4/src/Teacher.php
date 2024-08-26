@@ -1,4 +1,5 @@
 <?php
+namespace App\App;
 
 class Teacher extends User
 {

@@ -1,4 +1,6 @@
 <?php
+namespace App\App;
+
 class Admin extends User
 {
     public string $role = "admin";
@@ -19,83 +21,42 @@ class Admin extends User
         $fin = fopen("php://stdin", "r");
         echo "Enter an option from 1 to 7: ";
         $inputOption = trim(fgets($fin));
-        if ($inputOption == "1") {
-            $this->createSubject($subjects, $users);
-        }
-        else if ($inputOption == "2") {
-            $this->createTeacher($subjects, $users);
-        }
-        else if ($inputOption == "3") {
-            $this->createStudent($subjects, $users);
-        }
-        else if ($inputOption == "4") {
-            $this->removeSubject($subjects, $users);
-        }
-        else if ($inputOption == "5") {
-            $this->removeTeacher($subjects, $users);
-        }
-        else if ($inputOption == "6") {
-            $this->removeStudent($subjects, $users);
-        }
-        else if ($inputOption == "7") {
-            $this->logOut();
+        switch ($inputOption) {
+            case "1":
+                $this->createSubject($subjects, $users);
+                break;
+            case "2":
+                $this->createTeacher($subjects, $users);
+                break;
+            case "3":
+                $this->createStudent($subjects, $users);
+                break;
+            case "4":
+                $this->removeSubject($subjects, $users);
+                break;
+            case "5":
+                $this->removeTeacher($subjects, $users);
+                break;
+            case "6":
+                $this->removeStudent($subjects, $users);
+                break;
+            case "7":
+                $this->logOut();
+                break;
+            default:
+                echo "Invalid option! Please enter a valid option.\n";
+                break;
         }
 
     }
 
-    public function handleStringInput(string $prompt){
-        $fin = fopen("php://stdin", "r");
-        echo $prompt;
-        $input = trim(fgets($fin));
-        while(!$input || strlen($input) < 2){
-            echo "Incorrent!\n";
-            echo $prompt;
-            $input = trim(fgets($fin));
-        }
-        return $input;
-    }
-
-    private function handlePasswordInput(string $prompt){
-        $fin = fopen("php://stdin", "r");
-        echo $prompt;
-        $input = trim(fgets($fin));
-        $pattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/";
-
-        while(!$input || !preg_match($pattern, $input)){
-            echo "Incorrent!\n";
-            echo $prompt;
-            $input = trim(fgets($fin));
-        }
-        return $input;
-    }
-
-    private function handleSubjectsInput(string $prompt, array $subjects){
-        echo $prompt;
-        foreach($subjects as $subject){
-            echo "$subject\n";
-        }
-        $fin = fopen("php://stdin", "r");
-        $input = trim(fgets($fin));
-        while(empty($input) || count(explode(", ", $input)) < 1){
-            echo $prompt;
-            foreach($subjects as $subject){
-                echo "$subject\n";
-            }
-            $input = trim(fgets($fin));
-        }
-        echo $input;
-        $selectedSubjects = explode(", ", $input);
-        return $selectedSubjects;
-    }
-
-    public function createSubject(array $subjects, array $users){
+    public function createSubject(array &$subjects, array $users){
         $inputSubject = $this->handleStringInput("Enter subject name: ");
         array_push($subjects, $inputSubject);
-        print_r($subjects);
         $this->run($subjects, $users);
     }
 
-    public function createTeacher(array $subjects, array $users){
+    public function createTeacher(array $subjects, array &$users){
         $username = $this->handleStringInput("Enter username for teacher:");
         $password = $this->handlePasswordInput("Enter password for teacher which is 6 characters long and contains both letters and numbers:");
         $firstName = $this->handleStringInput("Enter first name:");
@@ -110,7 +71,7 @@ class Admin extends User
         $this->run($subjects, $users);
     }
 
-    public function createStudent(array $subjects, array $users){
+    public function createStudent(array $subjects, array &$users){
         $username = $this->handleStringInput("Enter username for student:");
         $password = $this->handlePasswordInput("Enter password for student which is 6 characters long and contains both letters and numbers:");
         $firstName = $this->handleStringInput("Enter first name:");
@@ -138,6 +99,7 @@ class Admin extends User
         $index = array_search($subjectName, $subjects);
         if($index !== false){
             unset($subjects[$index]);
+            echo "Subject removed successfully\n";
             foreach($users as $user){
                 if($user->role == "teacher"){
                     $teacherSubjectsIndex = array_search($subjectName, $user->subjects);
@@ -154,6 +116,7 @@ class Admin extends User
             echo "Subject not found!\n";
             $this->removeSubject($subjects, $users);
         }
+        $this->run($subjects, $users);
     }
 
     public function removeTeacher(array $subjects, array $users){
@@ -166,7 +129,7 @@ class Admin extends User
         while(!$teacherId){
             echo "Pleasure type an id: ";
         }
-        if($users[$teacherId - 1]){
+        if($users[$teacherId - 1] && $users[$teacherId - 1]->role == "teacher"){
             unset($users[$teacherId - 1]);
             echo "Teacher remove successfully\n";
         }
@@ -189,7 +152,7 @@ class Admin extends User
         }
 
         foreach ($users as $user){
-            if($user->id == $studentId){
+            if($user->id == $studentId && $user->role == "student"){
                 unset($users[$studentId - 1]);
                 echo "Student removed successfully!\n";
             }

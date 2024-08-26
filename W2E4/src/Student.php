@@ -1,6 +1,6 @@
 <?php
-
-include 'User.php';
+namespace App\App;
+include_once 'User.php';
 class Student extends User
 {
     public array $subjectsAndGrades;

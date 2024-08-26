@@ -1,5 +1,5 @@
 <?php
-
+namespace App\App;
 include'./src/Student.php';
 include './src/Teacher.php';
 include './src/Admin.php';
@@ -18,7 +18,6 @@ $s = new Student(1,"Test", "test1", "Angel", "Angelov", $subjectsAndGrades);
 $t = new Teacher(2,"Test", "test2", "Ivan", "Ivanov", $subjects);
 $a = new Admin(3,"Test", "test3", "Georgi", "Georgiev");
 $users = [$s, $t, $a];
-
 function login($username, $password, $user): bool{
     if($username == $user->username && $password == $user->password){
         return true;
@@ -56,5 +55,4 @@ function handleLogin(){
         echo "Wrong username or password!\n";
     }
 }
-
 handleLogin();

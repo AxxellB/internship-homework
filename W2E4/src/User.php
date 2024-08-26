@@ -1,4 +1,6 @@
 <?php
+namespace App\App;
+
 class User
 {
     public int $id;
@@ -22,6 +24,51 @@ class User
                 echo "$user->id." . " " . $user->firstName . " " . $user->lastName . "\n";
             }
         }
+    }
+
+    public function handleStringInput(string $prompt){
+        $fin = fopen("php://stdin", "r");
+        echo $prompt;
+        $input = trim(fgets($fin));
+        while(!$input || strlen($input) < 2){
+            echo "Incorrent!\n";
+            echo $prompt;
+            $input = trim(fgets($fin));
+        }
+        return $input;
+    }
+
+    public function handlePasswordInput(string $prompt){
+        $fin = fopen("php://stdin", "r");
+        echo $prompt;
+        $input = trim(fgets($fin));
+        $pattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/";
+
+        while(!$input || !preg_match($pattern, $input)){
+            echo "Incorrent!\n";
+            echo $prompt;
+            $input = trim(fgets($fin));
+        }
+        return $input;
+    }
+
+    public function handleSubjectsInput(string $prompt, array $subjects){
+        echo $prompt;
+        foreach($subjects as $subject){
+            echo "$subject\n";
+        }
+        $fin = fopen("php://stdin", "r");
+        $input = trim(fgets($fin));
+        while(empty($input) || count(explode(", ", $input)) < 1){
+            echo $prompt;
+            foreach($subjects as $subject){
+                echo "$subject\n";
+            }
+            $input = trim(fgets($fin));
+        }
+        echo $input;
+        $selectedSubjects = explode(", ", $input);
+        return $selectedSubjects;
     }
 
     public function logOut(){
