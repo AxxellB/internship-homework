@@ -1,0 +1,258 @@
+.navbar {
+    background: #D3A246;
+    padding: 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.nav-item {
+    padding: 10px
+}
+
+.active {
+    color: #D3A246 !important;
+    background: #161A1E;
+}
+
+.navbar-brand {
+    margin-right: 15vw;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    background: #f6ecda;
+}
+
+
+.sidebar .nav-item .nav-link {
+    color: #161A1E !important;
+    font-weight: 500;
+}
+
+.sidebar .active {
+    background: #F0E1BC;
+}
+
+.sidebar .nav-item:hover {
+    background: #F0E1BC;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    max-width: 12vw;
+    min-width: 12vw;
+    border: 1px solid #D4D4D4;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 4.5vh;
+}
+
+.page-title {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.page-title-section-left {
+    margin-left: 13%;
+}
+
+.page-title-section-right {
+    display: flex;
+    gap: 35px;
+}
+
+.page-title-section-right-position {
+    position: relative;
+    right: 10vw;
+}
+
+.balance-container {
+    margin-top: 35px;
+    margin-left: 10px;
+    display: flex;
+    position: relative;
+    left: 13vw;
+    max-width: 40vw;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+}
+
+.balance-value {
+    margin: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.estimated-balance {
+    padding: 13px;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.balance ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+}
+
+.balance ul li {
+    padding: 15px;
+    list-style: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: left;
+}
+
+.balance-diagram {
+    padding: 25px;
+}
+
+.fiat-container {
+    margin: 20px;
+    display: flex;
+    position: fixed;
+    left: 13vw;
+    min-width: 45vw;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-main {
+    color: black;
+    background: #D3A246;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-style: none;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    color: black;
+    background: #CDCDCD;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-style: none;
+    border-radius: 4px;
+}
+
+.card-btn-main {
+    color: black;
+    background: #D3A246;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-style: none;
+    border-radius: 4px;
+}
+
+.card-btn-secondary {
+    color: black;
+    background: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid #D3A246;
+    border-radius: 4px;
+}
+
+.fiat-balance {
+    max-width: 30vw;
+    position: relative;
+    left: 13.5vw;
+    padding: 15px;
+}
+
+.fiat-cards-container {
+    max-width: 80vw;
+    position: relative;
+    left: 13.5vw;
+}
+
+.card {
+    border-style: none;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header {
+    padding: 15px;
+    border-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-balance {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.currency-full-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #848E9C;
+}
+
+footer {
+    margin-top: 8vh;
+    position: relative;
+    background: #040404;
+    padding: 60px
+}
+
+footer .container-fluid {
+    justify-content: center;
+}
+
+footer ul li {
+    list-style: none;
+    color: #EEC77F;
+    font-family: Inter, serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.footer-heading {
+    color: white;
+    margin-bottom: 20px;
+    font-family: Inter, serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.copyright {
+    margin: 0 auto;
+}
