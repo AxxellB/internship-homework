@@ -47,16 +47,6 @@ $crypto_array = [
     ]
 ];
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Crypto Wallet</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/styles/main.css">
-</head>
-<body>
 <?php include 'common/header.php' ?>
 <div class="sidebar-page-title-balance">
     <div class="container-fluid">
@@ -66,11 +56,12 @@ $crypto_array = [
                     <div class="sidebar">
                         <ul class="nav flex-column">
                             <li class="nav-item active">
-                                <a class="nav-link" aria-current="page" href="#"><img src="static/img/image%201.png"> My
+                                <a class="nav-link" aria-current="page" href=""><img src="static/img/image%201.png"> My
                                     Wallet</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="static/img/image%202.png"> Internal Transfer</a>
+                                <a class="nav-link" href="/internalTransactions.php"><img
+                                            src="static/img/image%202.png"> Internal Transfer</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><img src="static/img/image%206.png"> Deposit</a>
@@ -88,7 +79,8 @@ $crypto_array = [
                                 <a class="nav-link" href="#"><img src="static/img/image%205.png"> Get Loan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="static/img/image%203.png"> Transaction
+                                <a class="nav-link" href="/transactionHistory.php"><img src="static/img/image%203.png">
+                                    Transaction
                                     History</a>
                             </li>
                         </ul>
@@ -159,7 +151,7 @@ $crypto_array = [
 <div class="fiat-balance">
     <div>Crypto Balance</div>
 </div>
-<div class="fiat-cards-container">
+<div class="crypto-cards-container">
     <div class="row">
         <?php foreach ($crypto_array as $crypto) { ?>
             <div class="col-md-4">
@@ -184,5 +176,3 @@ $crypto_array = [
     </div>
 </div>
 <?php include 'common/footer.php' ?>
-</body>
-</html>

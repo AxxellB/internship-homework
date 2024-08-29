@@ -21,6 +21,9 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background: #f6ecda;
 }
 
@@ -57,6 +60,15 @@ body {
     align-items: center;
     background: white;
 }
+
+.sidebar-page-title-transactions {
+    margin-bottom: 10vh;
+}
+
+.sidebar-page-title-transactions .container-fluid {
+    padding: 0;
+}
+
 
 .sidebar-page-title-balance .container-fluid {
     padding: 0;
@@ -161,6 +173,14 @@ body {
     border-radius: 4px;
 }
 
+.btn-main:hover {
+    background: #ecce80;
+}
+
+.btn-secondary:hover {
+    background: #e8e8e8
+}
+
 .card-btn-main {
     color: black;
     background: #D3A246;
@@ -168,6 +188,15 @@ body {
     padding-right: 50px;
     border-style: none;
     border-radius: 4px;
+}
+
+.card-btn-main:hover {
+    background: #ecce80;
+}
+
+.card-btn-secondary:hover {
+    background: #D3A246;
+    color: white;
 }
 
 .card-btn-secondary {
@@ -194,6 +223,13 @@ body {
     left: 13.5vw;
 }
 
+.crypto-cards-container {
+    max-width: 80vw;
+    position: relative;
+    left: 13.5vw;
+    margin-bottom: 8vh;
+}
+
 .card {
     border-style: none;
 }
@@ -208,6 +244,11 @@ body {
     border-style: none;
     display: flex;
     justify-content: space-between;
+    background: white;
+}
+
+.card-body {
+    background: white;
 }
 
 .card-balance {
@@ -222,7 +263,7 @@ body {
 }
 
 footer {
-    margin-top: 8vh;
+    margin-top: auto;
     position: relative;
     background: #040404;
 }
@@ -288,4 +329,174 @@ footer a:hover {
     font-family: Inter, serif;
     color: #D3A246;
     font-weight: 400;
+}
+
+.transfer-container {
+    background: white;
+}
+
+.transfer-heading {
+    font-size: 20px;
+    margin: 20px 20px 20px 0;
+}
+
+.transfer-container .card-header {
+    background: white;
+    justify-content: left;
+    padding: 15px 15px 0 15px;
+    margin-top: 15px;
+}
+
+.transfer-container .card-body {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer-container .card-body .card-btn-main {
+    padding-top: 4%;
+    padding-left: 38%;
+    padding-bottom: 4%;
+    padding-right: 38%;
+}
+
+.transfer-container .card-body input {
+    border-style: none;
+    padding: 5px;
+}
+
+.transfer-available {
+    color: #9f9d9d;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.transfer-amount {
+    color: black;
+}
+
+
+.deposit-options {
+    border: 1px solid #848E9C;
+    width: 7vw;
+    height: 2.5vh;
+    border-radius: 3px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.deposit-input {
+    color: #848E9C;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #D3A246;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.transaction-history-filter {
+    background: white;
+    display: flex;
+    margin-top: 30px;
+    padding: 20px 20px 40px 20px;
+    gap: 1vw;
+    align-items: flex-end;
+}
+
+.transaction-filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-filter label {
+    font-weight: 500;
+}
+
+.transaction-filter input {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #D3A246;
+    border-radius: 3px;
+    padding: 8px;
+    margin-top: 5px;
+    width: 11vw;
+    height: 4vh;
+}
+
+.transaction-filter select {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #D3A246;
+    border-radius: 3px;
+    width: 11vw;
+    height: 4vh;
+    margin-top: 5px;
+}
+
+.transaction-filter-btn-main {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #D3A246;
+    border-radius: 3px;
+    border-style: none;
+    padding: 1vh 4vw;
+    height: 4vh;
+    cursor: pointer;
+}
+
+.transaction-filter-btn-main:hover {
+    background: #ecce80;
+}
+
+.transaction-history-container {
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.transaction-history-table-container {
+    padding: 15px 15px 35px 15px;
+    background: white;
+}
+
+.transaction-history-results-container h3 {
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+}
+
+.transaction-history-results-container table {
+    font-size: 14px;
+}
+
+.transaction-history-results-container table thead th {
+    color: #848E9C;
+    font-size: 14px;
+}
+
+.transaction-history-results-container table tbody td {
+    font-weight: 500;
+}
+
+.transaction-history-results-container table tbody tr td:last-child {
+    font-weight: 700;
+}
+
+.transaction-success {
+    color: green !important;
+}
+
+.transaction-waiting {
+    color: #D3A246 !important;
 }

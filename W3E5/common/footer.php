@@ -45,3 +45,5 @@
         <span class="copyright-text">Copyright © 2024 Test</span>
     </div>
 </footer>
+</body>
+</html>
