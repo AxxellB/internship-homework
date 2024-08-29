@@ -47,9 +47,7 @@ body {
     min-width: 12vw;
     border: 1px solid #D4D4D4;
     background: white;
-    position: fixed;
-    left: 0;
-    top: 4.5vh;
+    position: relative;
 }
 
 .page-title {
@@ -60,8 +58,12 @@ body {
     background: white;
 }
 
+.sidebar-page-title-balance .container-fluid {
+    padding: 0;
+}
+
 .page-title-section-left {
-    margin-left: 13%;
+    margin-left: 5%;
 }
 
 .page-title-section-right {
@@ -79,7 +81,7 @@ body {
     margin-left: 10px;
     display: flex;
     position: relative;
-    left: 13vw;
+    left: 5vw;
     max-width: 40vw;
     background: white;
     justify-content: space-between;
@@ -223,11 +225,14 @@ footer {
     margin-top: 8vh;
     position: relative;
     background: #040404;
-    padding: 60px
 }
 
 footer .container-fluid {
-    justify-content: center;
+    padding: 60px;
+}
+
+footer .container-fluid {
+    justify-content: space-between;
 }
 
 footer ul li {
@@ -253,6 +258,34 @@ footer ul {
     font-size: 16px;
 }
 
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .copyright {
-    margin: 0 auto;
+    background: #303030;
+    padding: 15px;
+}
+
+.copyright-text {
+    font-size: 14px;
+    font-family: Inter, serif;
+    color: #D3A246;
+    font-weight: 400;
 }

@@ -47,8 +47,6 @@ $crypto_array = [
     ]
 ];
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,92 +57,78 @@ $crypto_array = [
     <link rel="stylesheet" href="static/styles/main.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+<?php include 'common/header.php' ?>
+<div class="sidebar-page-title-balance">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="static/img/image%208.png"></a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">By Crypto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Markets</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Trade</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Leverage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Earn</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link active" aria-current="page" href="#">Wallet</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <nav>
-        <div class="sidebar">
-            <ul class="nav flex-column">
-                <li class="nav-item active">
-                    <a class="nav-link" aria-current="page" href="#"><img src="static/img/image%201.png"> My Wallet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%202.png"> Internal Transfer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%206.png"> Deposit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%204.png"> Exchange</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%207.png"> Withdraw</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/Frame.png"> Get Staking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%205.png"> Get Loan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="static/img/image%203.png"> Transaction History</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<div class="page-title">
-    <div class="page-title-section-left">
-        <h1>Wallet Overview</h1>
-    </div>
-    <div class="page-title-section-right-position">
-        <div class="page-title-section-right">
+        <div class="row">
+            <div class="col-md-1">
+                <nav>
+                    <div class="sidebar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#"><img src="static/img/image%201.png"> My
+                                    Wallet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%202.png"> Internal Transfer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%206.png"> Deposit</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%204.png"> Exchange</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%207.png"> Withdraw</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/Frame.png"> Get Staking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%205.png"> Get Loan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><img src="static/img/image%203.png"> Transaction
+                                    History</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-11">
+                <div class="page-title">
+                    <div class="page-title-section-left">
+                        <h1>Wallet Overview</h1>
+                    </div>
+                    <div class="page-title-section-right-position">
+                        <div class="page-title-section-right">
 
-            <button class="btn-main">Deposit</button>
-            <button class="btn-secondary">Withdraw</button>
-            <button class="btn-secondary">Transfer</button>
+                            <button class="btn-main">Deposit</button>
+                            <button class="btn-secondary">Withdraw</button>
+                            <button class="btn-secondary">Transfer</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="balance-container">
+                    <div class="balance">
+                        <div class="estimated-balance">Estimated Balance</div>
+                        <div class="balance-value">993,313456 BTC <img src="static/img/Vector%202.png"></div>
+                        <ul>
+                            <li><img src="static/img/Rectangle%2064.png"> Euro <span> 38%</span></li>
+                            <li><img src="static/img/Rectangle%2065.png"> USD <span> 42%</span></li>
+                            <li><img src="static/img/Rectangle%2066.png"> USDT <span> 12%</span></li>
+                            <li><img src="static/img/Rectangle%2067.png"> BGN <span> 21%</span></li>
+                        </ul>
+                    </div>
+                    <div class="balance-diagram">
+                        <img src="static/img/Frame.jpg">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="balance-container">
-    <div class="balance">
-        <div class="estimated-balance">Estimated Balance</div>
-        <div class="balance-value">993,313456 BTC <img src="static/img/Vector%202.png"></div>
-        <ul>
-            <li><img src="static/img/Rectangle%2064.png"> Euro <span> 38%</span></li>
-            <li><img src="static/img/Rectangle%2065.png"> USD <span> 42%</span></li>
-            <li><img src="static/img/Rectangle%2066.png"> USDT <span> 12%</span></li>
-            <li><img src="static/img/Rectangle%2067.png"> BGN <span> 21%</span></li>
-        </ul>
-    </div>
-    <div class="balance-diagram">
-        <img src="static/img/Frame.jpg">
-    </div>
-</div>
 <div class="fiat-balance">
     <div>Fiat Balance</div>
 </div>
@@ -199,54 +183,6 @@ $crypto_array = [
         <?php } ?>
     </div>
 </div>
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="footer-heading">Company</div>
-                <ul>
-                    <li>About Us</li>
-                    <li>Careers</li>
-                    <li>Bug Bounty</li>
-                    <li>Blog</li>
-                    <li>Refer a Friend</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-heading">Legal</div>
-                <ul>
-                    <li>Privacy Policy</li>
-                    <li>Terms & Conditions</li>
-                    <li>GDPR</li>
-                    <li>AML Policy</li>
-                    <li>Licenses</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-heading">Help</div>
-                <ul>
-                    <li>Fees</li>
-                    <li>Help Center</li>
-                    <li>Security</li>
-                    <li>Bitcoin Loans</li>
-                    <li>Ethereum Loans</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-heading">Follow Us</div>
-                <div class="footer-icons">
-                    <img src="static/img/XMLID_16_.png">
-                    <img src="static/img/XMLID_17_%20.png">
-                    <img src="static/img/XMLID_18_.png">
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <span class="copyright-text">Copyright 2024 Test</span>
-        </div>
-    </div>
-</footer>
-
-
+<?php include 'common/footer.php' ?>
 </body>
 </html>
