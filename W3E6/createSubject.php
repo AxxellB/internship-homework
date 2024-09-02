@@ -3,6 +3,22 @@ ob_start();
 
 include 'header.php';
 
+function getCurrentUser()
+{
+    if (file_exists('log.txt')) {
+        return unserialize(file_get_contents('log.txt'));
+    }
+    return null;
+}
+
+$loggedInUser = getCurrentUser();
+
+if ($loggedInUser === null || !$loggedInUser instanceof Admin) {
+    header("Location: index.php");
+    exit();
+}
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subjectName = $_POST['subjectName'];
     $users = unserialize(file_get_contents("users.txt"));

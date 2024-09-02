@@ -8,6 +8,22 @@ require_once 'src/Student.php';
 require_once 'src/Teacher.php';
 require_once 'src/Admin.php';
 
+function getCurrentUser()
+{
+    if (file_exists('log.txt')) {
+        return unserialize(file_get_contents('log.txt'));
+    }
+    return null;
+}
+
+$loggedInUser = getCurrentUser();
+
+if ($loggedInUser === null || !$loggedInUser instanceof Teacher) {
+    header("Location: index.php");
+    exit();
+}
+
+
 $usersData = unserialize(file_get_contents("users.txt"));
 $students = array_filter($usersData, function ($user) {
     return $user instanceof Student;

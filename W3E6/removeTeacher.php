@@ -8,6 +8,22 @@ require_once 'src/Student.php';
 require_once 'src/Teacher.php';
 require_once 'src/Admin.php';
 
+function getCurrentUser()
+{
+    if (file_exists('log.txt')) {
+        return unserialize(file_get_contents('log.txt'));
+    }
+    return null;
+}
+
+$loggedInUser = getCurrentUser();
+
+if ($loggedInUser === null || !$loggedInUser instanceof Admin) {
+    header("Location: index.php");
+    exit();
+}
+
+
 function getTeachers($usersData)
 {
     $teachers = [];
