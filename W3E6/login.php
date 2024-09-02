@@ -4,9 +4,9 @@ use App\App\Student;
 use App\App\Teacher;
 use App\App\Admin;
 
-require 'src/Student.php';
-require 'src/Teacher.php';
-require 'src/Admin.php';
+require_once 'src/Student.php';
+require_once 'src/Teacher.php';
+require_once 'src/Admin.php';
 
 $subjectsAndGrades = [
     "maths" => [5, 4, 6],
@@ -17,16 +17,12 @@ $subjects = [
     "maths", "history"
 ];
 
-$s = new Student(1, "Test", "test1", "Angel", "Angelov", $subjectsAndGrades);
-$t = new Teacher(2, "Test", "test2", "Ivan", "Ivanov", $subjects);
-$a = new Admin(3, "Test", "test3", "Georgi", "Georgiev");
-$users = [$s, $t, $a];
-
+$users = unserialize(file_get_contents("users.txt"));
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($users as $user) {
         if (login($_POST["username"], $_POST["password"], $user)) {
-            file_put_contents("log.txt", serialize($_POST));
+            file_put_contents("log.txt", serialize($user));
             header("Location: index.php");
             exit();
         }

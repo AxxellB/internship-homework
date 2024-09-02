@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/W1E1/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/W1E2/src" isTestSource="false" packagePrefix="My\Composer\" />
       <sourceFolder url="file://$MODULE_DIR$/W1E2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/W2E4/src" isTestSource="false" packagePrefix="App\App\" />
+      <sourceFolder url="file://$MODULE_DIR$/W2E4/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/W1E1/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/W1E1/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/W1E1/vendor/nikic/php-parser" />
@@ -60,6 +62,7 @@
       <excludeFolder url="file://$MODULE_DIR$/W1E2/vendor/sebastian/type" />
       <excludeFolder url="file://$MODULE_DIR$/W1E2/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/W1E2/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/W2E4/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

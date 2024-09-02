@@ -1,0 +1,1 @@
+O:15:"App\App\Student":8:{s:2:"id";i:1;s:8:"username";s:4:"Test";s:8:"password";s:5:"test1";s:9:"firstName";s:5:"Angel";s:8:"lastName";s:7:"Angelov";s:6:"status";s:9:"loggedOut";s:17:"subjectsAndGrades";a:4:{s:7:"history";a:3:{i:0;i:4;i:1;i:4;i:2;i:6;}s:10:"literature";a:0:{}s:2:"it";a:0:{}s:6:"sports";a:0:{}}s:4:"role";s:7:"student";}

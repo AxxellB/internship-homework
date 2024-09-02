@@ -66,9 +66,10 @@
       <path value="$PROJECT_DIR$/W1E2/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/W1E2/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/W1E2/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/W2E4/vendor/composer" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">
@@ -76,6 +77,7 @@
   </component>
   <component name="PhpUnit">
     <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/W2E4/vendor/autoload.php" />
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/W1E1/vendor/autoload.php" />
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/W1E2/vendor/autoload.php" />
     </phpunit_settings>
