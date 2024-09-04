@@ -76,7 +76,8 @@ $userData = unserialize(file_get_contents("log.txt"));
                     </li>
                 <?php } ?>
                 <li class="nav-item">
-                    You are logged in as: <?php echo $userData->username; ?>
+                    <a class="nav-link" aria-current="page" href="">You are logged in
+                        as: <?php echo $userData->username; ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/logout.php">Log out</a>

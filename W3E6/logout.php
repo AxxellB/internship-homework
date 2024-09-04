@@ -4,4 +4,3 @@ if (file_exists("log.txt")) {
     fclose($handle);
     header("Location: index.php");
 }
-?>

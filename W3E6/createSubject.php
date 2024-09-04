@@ -1,7 +1,14 @@
 <?php
-ob_start();
 
 include 'header.php';
+
+use App\App\Teacher;
+use App\App\Student;
+use App\App\Admin;
+
+require_once 'src/Student.php';
+require_once 'src/Teacher.php';
+require_once 'src/Admin.php';
 
 function getCurrentUser()
 {
@@ -36,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-ob_end_flush();
 ?>
 <div class="container mt-5">
     <h1>Enter Subject</h1>
