@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class apiTest extends TestCase
 {
-    private string $jwtToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0ZXN0ZG9tYWluLmNvbSIsImlhdCI6MTcyNTQ1NzY0MCwiZXhwIjoxNzI1NDYxMjQwLCJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDIifX0.xwydaO6Zckq1s3f5epjpfSwLuq3XWmnyWvK9P20W_Es";
+    private string $jwtToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0ZXN0ZG9tYWluLmNvbSIsImlhdCI6MTcyNTUxNzQ2NSwiZXhwIjoxNzI1NTIxMDY1LCJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDIifX0.WP4KnPCHZx_VboUOD548feLZkWLA97y1PZXx2dGlnfI";
     private $apiUrl = 'http://0.0.0.0:80';
     private $postRequest = CURLOPT_POST;
     private $putRequest = CURLOPT_PUT;

@@ -49,12 +49,12 @@ if ($method == "GET") {
             echo json_encode(["message" => "Teacher not found"]);
             return;
         }
-        header("status: 200");
+        http_response_code(200);
         echo json_encode($current_teacher);
         return;
     }
 
-    header("status: 200");
+    http_response_code(200);
     print_r(json_encode($teachers));
 } else if ($method == "POST") {
     $isAuthorized = handleAuth();
@@ -128,7 +128,7 @@ if ($method == "GET") {
     $requestBody = json_decode(file_get_contents('php://input'), true);
     $current_teacher = reset($current_teacher);
     $key = array_search($current_teacher, $teachers);
-    
+
     foreach ($requestBody as $k => $v) {
         if (array_key_exists($k, $teachers[$key])) {
             $teachers[$key][$k] = $v;
