@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->execute()) {
         echo "Match added successfully!";
-        header("Location: viewMatches.php");  // Redirect after success
+        header("Location: viewMatches.php");
     } else {
         echo "Error: " . $stmt->error;
     }

@@ -40,6 +40,3 @@ $matches = $stmt->get_result();
         </tbody>
     </table>
 </div>
-
-</body>
-</html>
