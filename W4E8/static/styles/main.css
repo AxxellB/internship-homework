@@ -1,0 +1,50 @@
+.navbar {
+    background: dodgerblue;
+    padding: 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.home-page-image {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.home-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.nav-item {
+    padding: 10px
+}
+
+.active {
+    color: #D3A246 !important;
+    background: #161A1E;
+}
+
+.navbar-brand {
+    margin-right: 15vw;
+}
+
+.nav-link {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+}
