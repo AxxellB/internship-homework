@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 <div class="container mt-5">
-    <h1>Enter Subject</h1>
+    <h1>Enter Team Details</h1>
     <form action="createSubject.php" method="post">
         <div class="mb-3">
             <label for="subjectName" class="form-label">Subject Name</label>
