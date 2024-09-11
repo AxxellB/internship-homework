@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\SerializerInterface;
-#[Route('/api')]
+#[Route('/api/products')]
 class ProductController extends AbstractController
 {
     private $em;
@@ -26,7 +26,7 @@ class ProductController extends AbstractController
         $this->serializer = $serializer;
     }
 
-    #[Route('/products', name: 'product_create', methods: ['POST'])]
+    #[Route('', name: 'product_create', methods: ['POST'])]
     public function createProduct(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -62,7 +62,7 @@ class ProductController extends AbstractController
         return new JsonResponse($jsonProduct, Response::HTTP_CREATED, [], true);
     }
 
-    #[Route('/products', name: 'products_list', methods: ['GET'])]
+    #[Route('', name: 'products_list', methods: ['GET'])]
     public function listProducts(): JsonResponse
     {
         $products = $this->productRepository->findAll();
@@ -73,7 +73,7 @@ class ProductController extends AbstractController
         $jsonProducts = $this->serializer->serialize($products, 'json');
         return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
     }
-    #[Route('/products/{id}', name: 'product_details', methods: ['GET'])]
+    #[Route('/{id}', name: 'product_details', methods: ['GET'])]
     public function getProduct(int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
@@ -85,7 +85,7 @@ class ProductController extends AbstractController
         return new JsonResponse($jsonProduct, Response::HTTP_OK, [], true);
     }
 
-    #[Route('/products/{id}', name: 'update_product', methods: ['PUT'])]
+    #[Route('/{id}', name: 'update_product', methods: ['PUT'])]
     public function updateProduct(Request $request, int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
@@ -116,7 +116,7 @@ class ProductController extends AbstractController
     }
 
 
-    #[Route('/products/{id}', name: 'product_delete', methods: ['DELETE'])]
+    #[Route('/{id}', name: 'product_delete', methods: ['DELETE'])]
     public function deleteProduct(int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
