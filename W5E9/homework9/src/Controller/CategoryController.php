@@ -23,6 +23,7 @@ class CategoryController extends AbstractController
         $this->repository = $this->em->getRepository(Category::class);
         $this->serializer = $serializer;
     }
+
     #[Route('/categories', name: 'category_create', methods: ['POST'])]
     public function createCategory(Request $request): JsonResponse
     {
