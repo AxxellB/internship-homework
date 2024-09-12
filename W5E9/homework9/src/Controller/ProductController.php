@@ -18,6 +18,7 @@ class ProductController extends AbstractController
     private $categoryRepository;
     private $productRepository;
     private $serializer;
+
     public function __construct(EntityManagerInterface $em, SerializerInterface $serializer)
     {
         $this->em = $em;
@@ -26,14 +27,15 @@ class ProductController extends AbstractController
         $this->serializer = $serializer;
     }
 
-    public function validateProductData($data){
-        if(strlen($data['name'] < 2)){
+    public function validateProductData($data)
+    {
+        if (strlen($data['name'] < 2)) {
             return ['error' => 'Name must be at least 2 characters long'];
         }
-        if($data['price'] < 1){
+        if ($data['price'] < 1) {
             return ['error' => 'Price must be at least $1'];
         }
-        if($data['quantity'] < 1){
+        if ($data['quantity'] < 1) {
             return ['error' => 'Quantity must be at least 1'];
         }
         return null;
@@ -61,7 +63,7 @@ class ProductController extends AbstractController
         }
 
         $category = $this->categoryRepository->findOneBy(['name' => $data['category']]);
-        if(!$category){
+        if (!$category) {
             return new JsonResponse(['error' => 'Category not found'], Response::HTTP_NOT_FOUND);
         }
 
@@ -74,6 +76,57 @@ class ProductController extends AbstractController
         return new JsonResponse($jsonProduct, Response::HTTP_CREATED, [], true);
     }
 
+    #[Route('/filterCategory', name: 'products_list_filtered_by_category', methods: ['GET'])]
+    public function listProductsFilteredByCategory(Request $request): JsonResponse
+    {
+        $category = $request->query->get('category');
+
+        if (!$category) {
+            return new JsonResponse(['error' => 'Category parameter is required'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $categoryObj = $this->categoryRepository->findOneBy(['name' => $category]);
+        if (!$categoryObj) {
+            return new JsonResponse(['error' => 'Category not found'], Response::HTTP_NOT_FOUND);
+        }
+
+        $products = $this->productRepository->findBy(['category' => $categoryObj]);
+        if (!$products) {
+            return new JsonResponse(['message' => 'No products found for this category'], Response::HTTP_NOT_FOUND);
+        }
+
+        $jsonProducts = $this->serializer->serialize($products, 'json');
+        return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
+    }
+
+    #[Route('/filterPrice', name: 'products_list_filtered_by_price', methods: ['GET'])]
+    public function listProductsFilteredByPrice(Request $request): JsonResponse
+    {
+        $priceAbove = $request->query->get('priceAbove');
+        $priceBelow = $request->query->get('priceBelow');
+
+        if (!$priceAbove || !$priceBelow) {
+            return new JsonResponse(['error' => 'Both priceAbove and priceBelow parameters are required'], Response::HTTP_BAD_REQUEST);
+        }
+
+        if (!is_numeric($priceAbove) || !is_numeric($priceBelow)) {
+            return new JsonResponse(['error' => 'Price values must be numeric'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $products = $this->productRepository->createQueryBuilder('p')
+            ->where('p.price > :priceAbove AND p.price < :priceBelow')
+            ->setParameter('priceAbove', (float)$priceAbove)
+            ->setParameter('priceBelow', (float)$priceBelow)
+            ->getQuery()
+            ->getResult();
+
+        if (!$products) {
+            return new JsonResponse(['message' => 'No products found in this price range'], Response::HTTP_NOT_FOUND);
+        }
+
+        $jsonProducts = $this->serializer->serialize($products, 'json');
+        return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
+    }
     #[Route('', name: 'products_list', methods: ['GET'])]
     public function listProducts(): JsonResponse
     {

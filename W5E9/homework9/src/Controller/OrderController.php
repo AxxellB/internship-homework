@@ -73,6 +73,54 @@ class OrderController extends AbstractController
         return new JsonResponse($jsonOrder, Response::HTTP_CREATED, [], true);
     }
 
+    #[Route('/filterTotal', name: 'orders_list_filtered_by_total', methods: ['GET'])]
+    public function listProductsFilteredByPrice(Request $request): JsonResponse
+    {
+        $totalAbove = $request->query->get('totalAbove');
+        $totalBelow = $request->query->get('totalBelow');
+
+        if (!$totalAbove || !$totalBelow) {
+            return new JsonResponse(['error' => 'Both totalAbove and totalBelow parameters are required'], Response::HTTP_BAD_REQUEST);
+        }
+
+        if (!is_numeric($totalAbove) || !is_numeric($totalBelow)) {
+            return new JsonResponse(['error' => 'Total values must be numeric'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $orders = $this->orderRepository->createQueryBuilder('o')
+            ->where('o.total > :totalAbove AND o.total < :totalBelow')
+            ->setParameter('totalAbove', (float)$totalAbove)
+            ->setParameter('totalBelow', (float)$totalBelow)
+            ->getQuery()
+            ->getResult();
+
+        if (!$orders) {
+            return new JsonResponse(['message' => 'No orders found in this price range'], Response::HTTP_NOT_FOUND);
+        }
+
+        $jsonOrders = $this->serializer->serialize($orders, 'json');
+        return new JsonResponse($jsonOrders, Response::HTTP_OK, [], true);
+    }
+
+    #[Route('/filterStatus', name: 'orders_list_filtered_by_status', methods: ['GET'])]
+    public function listProductsFilteredByStatus(Request $request): JsonResponse
+    {
+        $orderStatus = $request->query->get('orderStatus');
+
+        if (!in_array($orderStatus, ['Pending', 'Completed', 'Cancelled'], true)) {
+            return new JsonResponse(['error' => 'Invalid order status'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $orders = $this->orderRepository->findBy(['status' => $orderStatus]);
+
+        if (!$orders) {
+            return new JsonResponse(['message' => 'No orders found with this status'], Response::HTTP_NOT_FOUND);
+        }
+
+        $jsonOrders = $this->serializer->serialize($orders, 'json');
+        return new JsonResponse($jsonOrders, Response::HTTP_OK, [], true);
+    }
+
     #[Route('', name: 'orders_list', methods: ['GET'])]
     public function listOrders(): JsonResponse
     {
