@@ -32,17 +32,19 @@ class CustomerController extends AbstractController
     }
 
     public function validateCustomerData($data){
-        if(strlen($data['name'] < 2)){
+        if(!isset($data['name']) || strlen($data['name'] < 2)){
             return ['error' => 'Name must be at least 2 characters long'];
         }
-        else if (!isset($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        if (!isset($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             return ['error' => 'Invalid email address'];
-        }else if(strlen($data['address']) < 5){
+        }
+        if(!isset($data['address']) || strlen($data['address']) < 5){
             return ['error' => 'Address must be at least 5 characters long'];
         }
-        else if($this->isEmailDuplicate($data['email'])){
+        if($this->isEmailDuplicate($data['email'])){
             return ['error' => 'Email already exist'];
-        } else if (isset($data['phone']) && !empty($data['phone'])) {
+        }
+        if (isset($data['phone']) && !empty($data['phone'])) {
             if (strlen($data['phone']) != 10) {
                 return ['error' => 'Phone must be 10 characters long'];
             }

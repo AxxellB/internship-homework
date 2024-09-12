@@ -11,8 +11,7 @@ enum OrderStatus: string
 {
     case Pending = 'Pending';
     case Completed = 'Completed';
-
-    case Cancelled = 'Canceled';
+    case Cancelled = 'Cancelled';
 }
 #[ORM\Entity(repositoryClass: OrderRepository::class)]
 #[ORM\Table(name: '`order`')]

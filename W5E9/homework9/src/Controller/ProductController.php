@@ -26,16 +26,28 @@ class ProductController extends AbstractController
         $this->serializer = $serializer;
     }
 
+    public function validateProductData($data){
+        if(strlen($data['name'] < 2)){
+            return ['error' => 'Name must be at least 2 characters long'];
+        }
+        if($data['price'] < 1){
+            return ['error' => 'Price must be at least $1'];
+        }
+        if($data['quantity'] < 1){
+            return ['error' => 'Quantity must be at least 1'];
+        }
+        return null;
+    }
+
     #[Route('', name: 'product_create', methods: ['POST'])]
     public function createProduct(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
-        if(strlen($data['name'] < 2)){
-            return new JsonResponse(['error' => 'Name must be at least 2 characters long'], Response::HTTP_BAD_REQUEST);
-        }else if($data['price'] < 1){
-            return new JsonResponse(['error' => 'Price must be at least $1'], Response::HTTP_BAD_REQUEST);
-        }else if($data['quantity'] < 1){
-            return new JsonResponse(['error' => 'Quantity must be at least 1'], Response::HTTP_BAD_REQUEST);
+
+        $validationErrors = $this->validateProductData($data);
+
+        if ($validationErrors) {
+            return new JsonResponse($validationErrors, Response::HTTP_BAD_REQUEST);
         }
 
         $product = new Product();
@@ -94,12 +106,10 @@ class ProductController extends AbstractController
         }
 
         $data = json_decode($request->getContent(), true);
-        if(strlen($data['name'] < 2)){
-            return new JsonResponse(['error' => 'Name must be at least 2 characters long'], Response::HTTP_BAD_REQUEST);
-        }else if($data['price'] < 1){
-            return new JsonResponse(['error' => 'Price must be at least $1'], Response::HTTP_BAD_REQUEST);
-        }else if($data['quantity'] < 1){
-            return new JsonResponse(['error' => 'Quantity must be at least 1'], Response::HTTP_BAD_REQUEST);
+        $validationErrors = $this->validateProductData($data);
+
+        if ($validationErrors) {
+            return new JsonResponse($validationErrors, Response::HTTP_BAD_REQUEST);
         }
 
         $product->setName($data['name']);
