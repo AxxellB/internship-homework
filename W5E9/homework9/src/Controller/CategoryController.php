@@ -29,7 +29,7 @@ class CategoryController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
 
-        if (strlen($data['name']) < 2 || strlen($data['description'])  < 2) {
+        if (!isset($data['name']) || strlen($data['name']) < 2 || !isset($data['description']) || strlen($data['description'])  < 2) {
             return new JsonResponse(['message' => 'Name and description must be at least 2 characters long'], Response::HTTP_BAD_REQUEST);
         }
 
@@ -75,7 +75,7 @@ class CategoryController extends AbstractController
             return new JsonResponse(['message' => 'Category not found'], Response::HTTP_NOT_FOUND);
         }
         $data = json_decode($request->getContent(), true);
-        if (strlen($data['name']) < 2 || strlen($data['description'])  < 2) {
+        if (!isset($data['name']) || strlen($data['name']) < 2 || !isset($data['description']) || strlen($data['description'])  < 2) {
             return new JsonResponse(['message' => 'Name and description must be at least 2 characters long'], Response::HTTP_BAD_REQUEST);
         }
 
