@@ -29,13 +29,13 @@ class ProductController extends AbstractController
 
     public function validateProductData($data)
     {
-        if (strlen($data['name'] < 2)) {
+        if (!isset($data['name']) || strlen($data['name'] < 2)) {
             return ['error' => 'Name must be at least 2 characters long'];
         }
-        if ($data['price'] < 1) {
+        if (!isset($data['price']) || $data['price'] < 1) {
             return ['error' => 'Price must be at least $1'];
         }
-        if ($data['quantity'] < 1) {
+        if (!isset ($data['quantity']) || $data['quantity'] < 1) {
             return ['error' => 'Quantity must be at least 1'];
         }
         return null;
