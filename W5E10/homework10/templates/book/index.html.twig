@@ -4,8 +4,10 @@
 
 {% block body %}
     <div class="container">
-    <h1>Books List</h1>
-
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Authors List</h1>
+            <a href="{{ path('book_create') }}" class="btn btn-success">Create Book</a>
+        </div>
     <table class="table">
         <thead>
         <tr>

@@ -33,7 +33,7 @@ class EditorController extends AbstractController
         ]);
     }
 
-    #[Route('/create', name: 'book_create')]
+    #[Route('/create', name: 'editor_create')]
     public function create(Request $request): Response
     {
         $editor = new Editors();
