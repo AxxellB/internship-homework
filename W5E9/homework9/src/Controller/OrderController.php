@@ -48,7 +48,7 @@ class OrderController extends AbstractController
         return null;
     }
 
-    #[Route('', name: 'order_create', methods: ['POST'])]
+    #[Route('/', name: 'order_create', methods: ['POST'])]
     public function createOrder(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -62,7 +62,7 @@ class OrderController extends AbstractController
         $order = new Order();
         $order->setOrderDate(new \DateTime($data['order_date']));
         $order->setTotal($data['total']);
-        $order->setStatus(orderStatus::from($data['status']));
+        $order->setStatus(OrderStatus::from($data['status']));
         $order->setCustomer($customer);
 
         $this->em->persist($order);

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -39,6 +40,17 @@ class ProductController extends AbstractController
             return ['error' => 'Quantity must be at least 1'];
         }
         return null;
+    }
+
+    #[Route('/list', name: 'products_list_front_end', methods: ['GET'])]
+    #[Template('product/index.html.twig')]
+    public function listProductsFrontEnd(): array
+    {
+        $products = $this->productRepository->findAll();
+
+        return [
+            'products' => $products
+        ];
     }
 
     #[Route('', name: 'product_create', methods: ['POST'])]
@@ -128,6 +140,7 @@ class ProductController extends AbstractController
         return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
     }
     #[Route('', name: 'products_list', methods: ['GET'])]
+    #[Template('product/index.html.twig')]
     public function listProducts(): JsonResponse
     {
         $products = $this->productRepository->findAll();
@@ -191,4 +204,7 @@ class ProductController extends AbstractController
         $this->em->flush();
         return new JsonResponse(['message' => 'Product removed successfully'], Response::HTTP_OK);
     }
+
 }
+
+
