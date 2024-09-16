@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Author!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Authors List</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Year of Birth</th>
+                <th>Nationality</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for author in authors %}
+                <tr>
+                    <td>{{ author.id }}</td>
+                    <td>{{ author.name }}</td>
+                    <td>{{ author.YearOfBirth|date('Y') }}</td>
+                    <td>{{ author.nationality }}</td>
+                    <td>
+                        <a href="{{ path('author_edit', { 'id': author.id }) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">No authors found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
