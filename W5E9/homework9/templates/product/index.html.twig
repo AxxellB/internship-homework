@@ -9,12 +9,21 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W5E9/homework9/src/Controller/ProductController.php</code></li>
-        <li>Your template at <code>/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W5E9/homework9/templates/product/index.html.twig</code></li>
-    </ul>
+    <table>
+        <thead>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        </thead>
+        <tbody>
+        {% for product in products  %}
+            <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}
