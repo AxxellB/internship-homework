@@ -31,12 +31,19 @@ class BooksTest extends TestCase
         $book->setAuthor($author);
         $this->assertSame($author, $book->getAuthor());
 
+        $editor->setName('Test Editor');
         $book->addEditor($editor);
+
+        $this->assertEquals("Test Editor", $book->getEditors()[0]->getName());
         $this->assertCount(1, $book->getEditors());
+
         $book->removeEditor($editor);
         $this->assertCount(0, $book->getEditors());
 
+        $genre->setName('Test Genre');
         $book->addGenre($genre);
+
+        $this->assertEquals("Test Genre", $book->getGenres()[0]->getName());
         $this->assertCount(1, $book->getGenres());
         $book->removeGenre($genre);
         $this->assertCount(0, $book->getGenres());
