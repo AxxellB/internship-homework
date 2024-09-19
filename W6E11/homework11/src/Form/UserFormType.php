@@ -2,26 +2,30 @@
 
 namespace App\Form;
 
-use App\Entity\Post;
 use App\Entity\User;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PostFormType extends AbstractType
+class UserFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
-            ->add('description');
+            ->add('email')
+            ->add('roles', ChoiceType::class, [
+                'choices' => ['User' => 'ROLE_USER', 'Author' => 'ROLE_AUTHOR', 'Admin' => 'ROLE_ADMIN'],
+                'multiple' => true,
+                'expanded' => true,
+            ])
+            ->add('name');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Post::class,
+            'data_class' => User::class,
         ]);
     }
 }

@@ -19,6 +19,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ path('app_posts') }}">Posts</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('app_admin') }}">Admin</a>
+            </li>
         </ul>
 
         <ul class="navbar-nav ms-auto">
@@ -27,7 +30,7 @@
                     <a class="nav-link">Logged in as {{ app.user.email }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-danger" href="{{ path('app_logout') }}">Logout</a>
+                    <a class="nav-link btn" href="{{ path('app_logout') }}">Logout</a>
                 </li>
             {% else %}
                 <li class="nav-item">

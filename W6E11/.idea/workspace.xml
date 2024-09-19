@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60563719-06dd-4f95-978a-a257694871a7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e6a31aec-c1a1-4fb8-93e3-5bc30211cb1e.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e6a31aec-c1a1-4fb8-93e3-5bc30211cb1e/storage_v2/_src_/schema/blog.oi8uAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework11/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/homework11/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework11/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/homework11/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework11/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/homework11/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +23,8 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/homework11" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.10/bin/php">
     <include_path>
@@ -169,6 +158,9 @@
       <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-uuid" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -182,7 +174,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "homework11",
     "last_opened_file_path": "/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W6E11/homework11/templates/post",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -228,7 +220,8 @@
       <option name="presentableId" value="Default" />
       <updated>1726582737629</updated>
       <workItem from="1726582738723" duration="1275000" />
-      <workItem from="1726643082166" duration="18699000" />
+      <workItem from="1726643082166" duration="19046000" />
+      <workItem from="1726728096415" duration="17721000" />
     </task>
     <servers />
   </component>

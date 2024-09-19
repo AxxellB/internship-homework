@@ -92,14 +92,6 @@ class Post
         return $this;
     }
 
-    /**
-     * @return Collection<int, Comment>
-     */
-    public function getComments(): Collection
-    {
-        return $this->comments;
-    }
-
     public function addComment(Comment $comment): static
     {
         if (!$this->comments->contains($comment)) {
@@ -120,5 +112,27 @@ class Post
         }
 
         return $this;
+    }
+
+    public function getAverageCommentRating(): float
+    {
+        $postComments = $this->getComments();
+        $postCommentsCount = count($postComments);
+        $totalRating = 0;
+        if ($postCommentsCount > 0) {
+            foreach ($postComments as $postComment) {
+                $totalRating += $postComment->getRating();
+            }
+            return round($totalRating / $postCommentsCount, 1);
+        }
+        return 0;
+    }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
     }
 }
