@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h1 class="display-4">{{ post.name }}</h1>
+                <p class="lead text-muted">By: {{ post.author.name }} | Posted
+                    on: {{ post.date_added|date('d-m-Y') }} | Average Comment Rating: {{ avgCommentRating }}</p>
+                <hr class="my-4">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>{{ post.description }}</p>
+            </div>
+        </div>
+
+        <hr>
+
+        {% if user %}
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h3>Leave a Comment</h3>
+                    {{ form_start(commentForm) }}
+                    <div class="form-group mb-3">
+                        {{ form_label(commentForm.content, 'Your Comment', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(commentForm.content, {'attr': {'class': 'form-control', 'rows': 3}}) }}
+                        {{ form_errors(commentForm.content) }}
+                    </div>
+
+                    <div class="form-group mb-3">
+                        {{ form_label(commentForm.rating, 'Rating (1-5)', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(commentForm.rating, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(commentForm.rating) }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    {{ form_end(commentForm) }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3>Comments</h3>
+                {% if post.comments is not empty %}
+                    {% for comment in post.comments %}
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div>
+                                        <h5 class="card-title">Rating: {{ comment.rating }}/5</h5>
+                                        <p class="card-text">{{ comment.content }}</p>
+                                        <footer class="blockquote-footer">Posted
+                                            on {{ comment.date_added|date('d-m-Y') }}</footer>
+                                    </div>
+                                    {% if user %}
+                                        {% if (user.id == comment.author.id) or (user.id == post.author.id) %}
+                                            <a href="{{ path('app_comment_delete', {id: comment.id }) }}"
+                                               class="btn btn-danger ms-auto">Delete</a>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No comments yet. Be the first to comment!</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
