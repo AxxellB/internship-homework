@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60563719-06dd-4f95-978a-a257694871a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/homework11/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.10/bin/php">
+    <include_path>
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/homework11/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/homework11/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/homework11/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/homework11/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/homework11/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/homework11/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/ux-turbo" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/asset-mapper" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/messenger" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/doctrine-messenger" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/stimulus-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/homework11/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/homework11/vendor/composer" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/homework11/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/homework11/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/homework11/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/homework11/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/homework11/vendor/symfony/polyfill-uuid" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2mCZu5ACh8Wm3JcKjfmXFSDgmPL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "homework11",
+    "last_opened_file_path": "/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W6E11/homework11/templates/post",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/homework11/templates/post" />
+      <recent name="$PROJECT_DIR$/homework11/templates/login" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/homework11/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60563719-06dd-4f95-978a-a257694871a7" name="Changes" comment="" />
+      <created>1726582737629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726582737629</updated>
+      <workItem from="1726582738723" duration="1275000" />
+      <workItem from="1726643082166" duration="19046000" />
+      <workItem from="1726728096415" duration="17721000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
