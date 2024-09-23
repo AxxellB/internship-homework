@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\SerializerInterface;
+
 #[Route('/api/orders')]
 class OrderController extends AbstractController
 {
@@ -28,7 +29,8 @@ class OrderController extends AbstractController
         $this->serializer = $serializer;
     }
 
-    public function validateOrderData($data){
+    public function validateOrderData($data)
+    {
         if (isset($data['order_date'])) {
             try {
                 $orderDate = new \DateTime($data['order_date']);
@@ -36,19 +38,19 @@ class OrderController extends AbstractController
                 return ['error' => 'Invalid order date provided'];
             }
         }
-        if(!isset($data['total']) || $data['total'] < 1) {
-             return ['error' => 'Total must be greater than 1'];
-         }
-        if(!isset($data['status']) || !in_array($data['status'], ['Pending', 'Completed', 'Cancelled'])) {
-             return ['error' => 'Invalid order status'];
+        if (!isset($data['total']) || $data['total'] < 1) {
+            return ['error' => 'Total must be greater than 1'];
         }
-         if(!isset($data['customer_id']) || !$this->customerRepository->find($data['customer_id'])){
-             return ['error' => 'Customer not found'];
-         }
+        if (!isset($data['status']) || !in_array($data['status'], ['Pending', 'Completed', 'Cancelled'])) {
+            return ['error' => 'Invalid order status'];
+        }
+        if (!isset($data['customer']) || !$this->customerRepository->find($data['customer'])) {
+            return ['error' => 'Customer not found'];
+        }
         return null;
     }
 
-    #[Route('/', name: 'order_create', methods: ['POST'])]
+    #[Route('', name: 'order_create', methods: ['POST'])]
     public function createOrder(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -58,7 +60,7 @@ class OrderController extends AbstractController
             return new JsonResponse($validationErrors, Response::HTTP_BAD_REQUEST);
         }
 
-        $customer = $this->customerRepository->find($data['customer_id']);
+        $customer = $this->customerRepository->find($data['customer']);
         $order = new Order();
         $order->setOrderDate(new \DateTime($data['order_date']));
         $order->setTotal($data['total']);
@@ -125,18 +127,19 @@ class OrderController extends AbstractController
     public function listOrders(): JsonResponse
     {
         $orders = $this->orderRepository->findAll();
-        if(!$orders){
+        if (!$orders) {
             return new JsonResponse(['message' => 'No orders found'], Response::HTTP_NOT_FOUND);
         }
 
         $jsonOrders = $this->serializer->serialize($orders, 'json');
         return new JsonResponse($jsonOrders, Response::HTTP_OK, [], true);
     }
+
     #[Route('/{id}', name: 'order_details', methods: ['GET'])]
     public function getOrder(int $id): JsonResponse
     {
         $order = $this->orderRepository->find($id);
-        if(!$order){
+        if (!$order) {
             return new JsonResponse(['message' => 'No order found'], Response::HTTP_NOT_FOUND);
         }
 
@@ -148,7 +151,7 @@ class OrderController extends AbstractController
     public function updateOrder(Request $request, int $id): JsonResponse
     {
         $order = $this->orderRepository->find($id);
-        if(!$order){
+        if (!$order) {
             return new JsonResponse(['message' => 'No order found'], Response::HTTP_NOT_FOUND);
         }
 
@@ -159,7 +162,7 @@ class OrderController extends AbstractController
             return new JsonResponse($validationErrors, Response::HTTP_BAD_REQUEST);
         }
 
-        $customer = $this->customerRepository->find($data['customer_id']);
+        $customer = $this->customerRepository->find($data['customer']);
         $order->setOrderDate(new \DateTime($data['order_date']));
         $order->setTotal($data['total']);
         $order->setStatus(orderStatus::from($data['status']));
@@ -177,7 +180,7 @@ class OrderController extends AbstractController
     public function deleteOrder(int $id): JsonResponse
     {
         $order = $this->orderRepository->find($id);
-        if(!$order){
+        if (!$order) {
             return new JsonResponse(['message' => 'No order found'], Response::HTTP_NOT_FOUND);
         }
 

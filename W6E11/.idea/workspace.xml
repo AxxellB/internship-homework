@@ -6,8 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="60563719-06dd-4f95-978a-a257694871a7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.idea/homework9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.idea/homework9.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/customer/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/customer/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/order/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/product/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,26 +185,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "homework11",
-    "last_opened_file_path": "/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W6E11/homework11/templates/post",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework12&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W6E11/homework11/templates/post&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/homework11/templates/post" />
@@ -222,6 +236,9 @@
       <workItem from="1726582738723" duration="1275000" />
       <workItem from="1726643082166" duration="19046000" />
       <workItem from="1726728096415" duration="17721000" />
+      <workItem from="1726818102785" duration="205000" />
+      <workItem from="1727016185508" duration="3517000" />
+      <workItem from="1727089093265" duration="553000" />
     </task>
     <servers />
   </component>
