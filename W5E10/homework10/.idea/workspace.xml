@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9af06b6b-2b05-4ce2-add4-83eba0baa4b2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/.idea/homework9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/.idea/homework9.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/public/js/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/public/js/categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/customer/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/customer/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/order/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/product/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../W6E11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,24 +164,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "homework12",
-    "last_opened_file_path": "/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W5E10/homework10/templates/user",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework12&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W5E10/homework10/templates/user&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/user" />
@@ -233,6 +219,9 @@
       <workItem from="1726645049989" duration="1244000" />
       <workItem from="1726728101501" duration="556000" />
       <workItem from="1727089089489" duration="456000" />
+      <workItem from="1727115243598" duration="167000" />
+      <workItem from="1727158884906" duration="577000" />
+      <workItem from="1727177801353" duration="189000" />
     </task>
     <servers />
   </component>

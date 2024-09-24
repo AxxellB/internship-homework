@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60563719-06dd-4f95-978a-a257694871a7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E10/homework10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.idea/homework9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.idea/homework9.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/public/js/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/public/js/categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/customer/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/customer/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/order/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../W5E9/homework9/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../W5E9/homework9/templates/product/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +224,10 @@
       <workItem from="1726728096415" duration="17721000" />
       <workItem from="1726818102785" duration="205000" />
       <workItem from="1727016185508" duration="3517000" />
-      <workItem from="1727089093265" duration="553000" />
+      <workItem from="1727089093265" duration="909000" />
+      <workItem from="1727115252449" duration="161000" />
+      <workItem from="1727158892862" duration="578000" />
+      <workItem from="1727177804151" duration="190000" />
     </task>
     <servers />
   </component>

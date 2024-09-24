@@ -1,7 +1,47 @@
 const apiUrl = 'http://localhost:8000/api/categories';
+const countriesApiUrl = 'https://restcountries.com/v3.1/all?fields=name';
 
 document.addEventListener('DOMContentLoaded', getCategories);
+document.addEventListener('DOMContentLoaded', getCountries);
 document.addEventListener('DOMContentLoaded', addEventListeners);
+
+
+function getCountryByName() {
+    const country = document.getElementById("countries").value;
+    fetch(`https://restcountries.com/v3.1/name/${country}`)
+        .then(response => response.json())
+        .then(countries => {
+            const country = countries[0];
+            const countryInfo = document.getElementById('countryInfo');
+            countryInfo.innerHTML = '';
+            const population = document.createElement('p');
+            const flag = document.createElement('i');
+            const capital = document.createElement('p');
+            flag.innerHTML = country.flag;
+            population.innerHTML = country.population;
+            capital.innerHTML = country.capital;
+            countryInfo.appendChild(flag);
+            countryInfo.appendChild(population);
+            countryInfo.appendChild(capital);
+        })
+        .catch(error => console.error('Error fetching categories:', error));
+}
+
+
+function getCountries() {
+    fetch(countriesApiUrl).then(response => response.json())
+        .then(countries => {
+            const countriesSelect = document.getElementById('countries');
+            countriesSelect.innerHTML = '';
+
+            countries.forEach(country => {
+                const option = document.createElement('option'); // Create a new row
+                option.innerHTML = country.name.common;
+                countriesSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error fetching categories:', error));
+}
 
 function addEventListeners() {
     const createForm = document.getElementById('categoryForm');
@@ -13,6 +53,8 @@ function addEventListeners() {
     if (editForm) {
         editForm.addEventListener('submit', editCategory);
     }
+    let getCountryBtn = document.getElementById('getCountry');
+    getCountryBtn.addEventListener('click', getCountryByName);
 }
 
 function getCategories() {
