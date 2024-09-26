@@ -1,0 +1,23 @@
+.pokemon-img {
+    width: 8vw !important;
+    height: 13vh !important;
+}
+
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table tr, td{
+    border: none;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
