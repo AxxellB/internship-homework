@@ -6,26 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9af06b6b-2b05-4ce2-add4-83eba0baa4b2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/public/js/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/public/js/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../W5E9/homework9/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W5E9/homework9/templates/category/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../W6E11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/src/Controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/src/Form/PostFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/src/Form/PostFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/login/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/login/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/login/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/login/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/create_post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/create_post.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/post_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../../W6E11/homework11/templates/post/post_details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W6E11/homework11/tests/LoginControllerTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +167,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homework11&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework12&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/angel.angelov/Desktop/Internship/Homework/internship-homework/W5E10/homework10/templates/user&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -235,6 +218,10 @@
       <workItem from="1726576874372" duration="4599000" />
       <workItem from="1726645049989" duration="1244000" />
       <workItem from="1726728101501" duration="556000" />
+      <workItem from="1727089089489" duration="456000" />
+      <workItem from="1727115243598" duration="167000" />
+      <workItem from="1727158884906" duration="577000" />
+      <workItem from="1727177801353" duration="189000" />
     </task>
     <servers />
   </component>

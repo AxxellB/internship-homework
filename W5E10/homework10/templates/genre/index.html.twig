@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello genre!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Editors List</h1>
+            <a href="{{ path('genre_create') }}" class="btn btn-success">Create Genre</a>
+        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for genre in genres %}
+                <tr>
+                    <td>{{ genre.id }}</td>
+                    <td>{{ genre.name }}</td>
+                    <td>{{ genre.description }}</td>
+                    <td>
+                        <a href="{{ path('genre_edit', { 'id': genre.id }) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">No genres found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

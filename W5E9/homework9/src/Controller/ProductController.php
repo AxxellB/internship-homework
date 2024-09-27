@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\SerializerInterface;
+
 #[Route('/api/products')]
 class ProductController extends AbstractController
 {
@@ -139,23 +140,25 @@ class ProductController extends AbstractController
         $jsonProducts = $this->serializer->serialize($products, 'json');
         return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
     }
+
     #[Route('', name: 'products_list', methods: ['GET'])]
     #[Template('product/index.html.twig')]
     public function listProducts(): JsonResponse
     {
         $products = $this->productRepository->findAll();
-        if(!$products){
+        if (!$products) {
             return new JsonResponse(['message' => 'No products found'], Response::HTTP_NOT_FOUND);
         }
 
         $jsonProducts = $this->serializer->serialize($products, 'json');
         return new JsonResponse($jsonProducts, Response::HTTP_OK, [], true);
     }
+
     #[Route('/{id}', name: 'product_details', methods: ['GET'])]
     public function getProduct(int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
-        if(!$product){
+        if (!$product) {
             return new JsonResponse(['message' => 'No product found'], Response::HTTP_NOT_FOUND);
         }
 
@@ -167,7 +170,7 @@ class ProductController extends AbstractController
     public function updateProduct(Request $request, int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
-        if(!$product){
+        if (!$product) {
             return new JsonResponse(['message' => 'No product found'], Response::HTTP_NOT_FOUND);
         }
 
@@ -186,6 +189,14 @@ class ProductController extends AbstractController
         } else {
             $product->setDescription(null);
         }
+        $category = $this->categoryRepository->findOneBy(['name' => $data['category']]);
+        if (!$category) {
+            return new JsonResponse(['error' => 'Category not found'], Response::HTTP_NOT_FOUND);
+        }
+        
+        $product->setCategory($category);
+        $this->em->persist($product);
+        $this->em->flush();
 
         $jsonProduct = $this->serializer->serialize($product, 'json');
         return new JsonResponse($jsonProduct, Response::HTTP_OK, [], true);
@@ -196,7 +207,7 @@ class ProductController extends AbstractController
     public function deleteProduct(int $id): JsonResponse
     {
         $product = $this->productRepository->find($id);
-        if(!$product){
+        if (!$product) {
             return new JsonResponse(['message' => 'No product found'], Response::HTTP_NOT_FOUND);
         }
 

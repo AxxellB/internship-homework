@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BookController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Authors List</h1>
+            <a href="{{ path('book_create') }}" class="btn btn-success">Create Book</a>
+        </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Year of Publishing</th>
+            <th>Editors</th>
+            <th>Genres</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.yearOfPublishing|date('Y') }}</td>
+                <td>
+                    {% for editor in book.editors %}
+                <ul>
+                    <li>{{ editor.name }}</li>
+                </ul>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for genre in book.genres %}
+                        <ul>
+                            <li>{{ genre.name }}</li>
+                        </ul>
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('book_edit', { 'id': book.id }) }}" class="btn btn-primary">Edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">No books found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}
