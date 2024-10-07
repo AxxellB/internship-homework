@@ -1,7 +1,8 @@
-import { useState } from "react";
+import {createContext, useState} from "react";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 
+export const TasksContext = createContext(null);
 function TaskManager() {
     const [tasks, setTasks] = useState([]);
     const [showForm, setShowForm] = useState(false);
@@ -33,11 +34,9 @@ function TaskManager() {
     return (
         <div className="container mt-4">
             {showForm ? (
-                <TaskForm
-                    addTask={saveTask}
-                    setShowForm={setShowForm}
-                    editTask={editTask}
-                />
+                <TasksContext.Provider value={{saveTask: saveTask, setShowForm: setShowForm, editTask: editTask}}>
+                    <TaskForm/>
+                </TasksContext.Provider>
             ) : (
                 <>
                     <button
