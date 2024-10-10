@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
-
-function TaskForm({ addTask, setShowForm, editTask }) {
+import {useState, useEffect, useContext} from "react";
+import {TasksContext} from './TaskManager';
+function TaskForm() {
+    const { saveTask, editTask, setShowForm} = useContext(TasksContext);
     const [formData, setFormData] = useState({
         name: '',
         description: ''
@@ -24,7 +25,7 @@ function TaskForm({ addTask, setShowForm, editTask }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTask(formData);
+        saveTask(formData);
         setFormData({ name: '', description: '' });
     };
 
